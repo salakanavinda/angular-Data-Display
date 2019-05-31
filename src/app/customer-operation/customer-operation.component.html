@@ -1,0 +1,8 @@
+<ul class="customers">
+    <li *ngFor="let customer of customers"
+    [class.selected]="customer===selectedCus"
+    (click)="onSelect(customer)"><span class="badge">{{customer.id}}</span>{{customer.name}}</li>
+</ul>
+<div *ngIf="selectedCus">
+  <h2>{{selectedCus.name | uppercase}}</h2>
+</div>
